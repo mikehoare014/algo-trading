@@ -1,0 +1,3 @@
+# If credentials aren’t stored yet, you can set them once like this:
+#keyring.set_password("AlpacaAPI", "api_key", "-")
+#keyring.set_password("AlpacaAPI", "api_secret", "-")
