@@ -24,7 +24,7 @@ stock_data.loc[sell_signals, 'signal'] = -1
 
 latest_row = stock_data.iloc[[-1]]
 
-if latest_row['signal'].item() == 0:
+if latest_row['signal'].item() == 1:
     order = api.place_order(ticker_symbol, 10, "buy")
     print("Trade executed:", order)
 else:
