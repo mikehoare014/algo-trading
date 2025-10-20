@@ -1,7 +1,7 @@
 import os
 import yfinance as yf
 import pandas as pd
-from alpaca_trade_api import AlpacaAPI
+from alpacha import AlphcaAPI
 
 api = AlphcaAPI(api_key="PK3WDIKCFF4ZPKWMG5QK25QSOS", api_secret="6oessnea2UcEfgLjA49zD5Mm6mCNtgEUG2DguhWHjn2p")
 
