@@ -1,13 +1,14 @@
 import os
 import yfinance as yf
 import pandas as pd
-from alpaca_trade_api import REST
+from alpaca_trade_api import AlpacaAPI
 
-api_key = os.getenv("ALPACA_API_KEY")
-api_secret = os.getenv("ALPACA_SECRET_KEY")
-api = REST(api_key, api_secret)
+api = AlphcaAPI(api_key="PK3WDIKCFF4ZPKWMG5QK25QSOS", api_secret="6oessnea2UcEfgLjA49zD5Mm6mCNtgEUG2DguhWHjn2p")
 
 ticker_symbol = "AAPL"
+
+print("Searching for buy signal for:", ticker_symbol)
+
 end_date = pd.Timestamp.today().date().isoformat()
 start_date = (pd.Timestamp.today() - pd.Timedelta(days=1825)).date().isoformat()
 
