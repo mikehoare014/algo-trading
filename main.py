@@ -1,9 +1,14 @@
+# %%
+
 import os
 import yfinance as yf
 import pandas as pd
 from alpacha import AlphcaAPI
 
-api = AlphcaAPI(api_key="PK3WDIKCFF4ZPKWMG5QK25QSOS", api_secret="6oessnea2UcEfgLjA49zD5Mm6mCNtgEUG2DguhWHjn2p")
+api_key = os.getenv("ALPACA_API_KEY")
+api_secret = os.getenv("ALPACA_SECRET_KEY")
+
+api = AlphcaAPI(api_key=api_key, api_secret=api_secret)
 
 ticker_symbol = "AAPL"
 
@@ -29,3 +34,5 @@ if latest_row['signal'].item() == 1:
     print("Trade executed:", order)
 else:
     print("No buy signal on the latest date.")
+
+# %%
