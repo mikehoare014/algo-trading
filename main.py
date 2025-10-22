@@ -39,8 +39,8 @@ def analyze_stock(symbol, ax=None):
         print(f"No data available for {symbol}")
         return None
         
-    stock_data['sma_50'] = stock_data['Close'].rolling(window=50).mean()
-    stock_data['sma_200'] = stock_data['Close'].rolling(window=200).mean()
+    stock_data['sma_50'] = stock_data['Close'].rolling(window=20).mean()
+    stock_data['sma_200'] = stock_data['Close'].rolling(window=50).mean()
     stock_data['signal'] = 0
 
     buy_signals = (stock_data['sma_50'] > stock_data['sma_200']) & (stock_data['sma_50'].shift(1) <= stock_data['sma_200'].shift(1))
