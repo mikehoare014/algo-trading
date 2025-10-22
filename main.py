@@ -13,8 +13,18 @@ api_secret = os.getenv("ALPACA_SECRET_KEY")
 api = AlphcaAPI(api_key=api_key, api_secret=api_secret)
 
 # List of stocks to analyze
-ticker_symbols = ["AAPL", "MSFT", "AMZN", "NVDA", "GOOGL", "META", "TSLA"]  # Magnificent Seven
-
+ticker_symbols = [
+    'NVDA', 'AAPL', 'MSFT', 'GOOG', 'GOOGL',
+    'AMZN', 'META', 'AVGO', 'TSLA', 'BRK.B',
+    'WMT', 'JPM', 'ORCL', 'LLY', 'V',
+    'NFLX', 'MA', 'XOM', 'JNJ', 'PLTR',
+    'COST', 'ABBV', 'HD', 'AMD', 'BAC',
+    'PG', 'UNH', 'GE', 'CVX', 'KO',
+    'CSCO', 'WFC', 'IBM', 'TMUS', 'MS',
+    'CRM', 'CAT', 'AXP', 'GS', 'PM',
+    'RTX', 'MU', 'ABT', 'MCD', 'MRK',
+    'LIN', 'TMO', 'PEP', 'DIS', 'BX'
+]
 print("Starting analysis for multiple stocks...")
 
 end_date = pd.Timestamp.today().date().isoformat()
