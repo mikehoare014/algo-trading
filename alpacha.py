@@ -38,4 +38,16 @@ class AlphcaAPI:
         response.raise_for_status()
         return response.json()
     
+    def get_positions(self):
+        """Get all open positions in the account."""
+        url = f"{self.base_url}/positions"
+        response = requests.get(url, headers=self.headers)
+        response.raise_for_status()
+        return response.json()
+    
+    def show_positions(self, positions):
+        for position in positions:
+            print(f"{position['symbol']}: {position['qty']} shares")
+
+    
 # %%
